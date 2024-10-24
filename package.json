@@ -2,22 +2,24 @@
   "name": "svelte-vapor",
   "version": "0.0.0",
   "type": "module",
-  "svelte": "./src/components/VaporComponent.svelte",
+  "svelte": "./dist/VaporComponent.svelte",
   "files": [
-    "src/components/VaporComponent.svelte"
+    "dist"
   ],
   "exports": {
     ".": {
-      "types": "./src/components/VaporComponent.svelte.d.ts",
-      "svelte": "./src/components/VaporComponent.svelte",
-      "default": "./src/components/VaporComponent.svelte"
+      "types": "./dist/VaporComponent.svelte.d.ts",
+      "svelte": "./dist/VaporComponent.svelte",
+      "default": "./dist/VaporComponent.svelte"
     }
   },
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "svelte-package -i src/components",
     "preview": "vite preview",
-    "lint": "eslint"
+    "lint": "eslint",
+    "release": "bumpp && pnpm publish",
+    "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
     "svelte": "^5.0.0",
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/package": "^2.3.6",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@sxzz/eslint-config": "^4.4.0",
     "@sxzz/prettier-config": "^2.0.2",
