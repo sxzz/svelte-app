@@ -1,6 +1,6 @@
 <script lang="ts">
-  import VaporComponent from '$lib/components/VaporComponent.svelte'
-  import HelloWorld from '$lib/components/HelloWorld.vue'
+  import VaporComponent from './components/VaporComponent.svelte'
+  import HelloWorld from './components/HelloWorld.vue'
 
   let count = $state(1)
 </script>
