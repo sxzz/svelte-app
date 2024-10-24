@@ -6,9 +6,12 @@
 </script>
 
 <VaporComponent
+  containerProps={{ id: 'vue-component' }}
   is={HelloWorld}
-  props={{ count, name: 'test component', nestProp: { count } }}
+  {count}
+  name="Vapor Component"
+  onIncrement={() => count++}
+  nestedProp={{ count }}
 />
 
-<button onclick={() => count++}>Increment</button>
 <button onclick={() => count--}>Decrement</button>
