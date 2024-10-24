@@ -5,7 +5,10 @@
   let count = $state(1)
 </script>
 
-<VaporComponent is={HelloWorld} props={{ count, name: 'test component' }} />
+<VaporComponent
+  is={HelloWorld}
+  props={{ count, name: 'test component', nestProp: { count } }}
+/>
 
 <button onclick={() => count++}>Increment</button>
 <button onclick={() => count--}>Decrement</button>
