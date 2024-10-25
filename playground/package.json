@@ -1,0 +1,20 @@
+{
+  "name": "playground",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "@vitejs/plugin-vue": "https://pkg.pr.new/@vitejs/plugin-vue@e3c5ce5",
+    "svelte": "^5.0.0",
+    "svelte-vapor": "workspace:*",
+    "vite": "^5.0.3",
+    "vite-plugin-inspect": "^0.8.7",
+    "vue": "https://pkg.pr.new/vuejs/vue-vapor/vue@2ed0be8"
+  }
+}
